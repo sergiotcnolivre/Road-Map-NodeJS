@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "commit": "npx git-cz"
+  },
+  "devDependencies": {
+    "cz-lean-changelog": "^0.0.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-lean-changelog"
+    }
+  }
+}

@@ -1,0 +1,40 @@
+Websocket é um protocolo que permite a comunicação bidirecional entre um navegador web e um servidor.
+Ele permite a criação de um tunel que transporta de forma contínua informações entre o navegador e o servidor de uma aplicação.
+Ele faz parte das especificações do HTML5 e é suportado pelas ultimas versões dos navegadores;
+Para entende-lo melhor vamos compara-lo ao modelo HTTP.
+Quando você abre seu navegador para acessar um site uma conexão é criada, em seguida é realizada uma requisição ao servidor do site.
+Ao receber a requisição, o servidor fará os devidos processos internos e devolverá uma resposta.
+Assim que a resposta é recebida a conexão é encerrada.
+Caso seja necessário pedir ao servidor mais informações, será necessário a realização de uma nova requisição que se encerra após enviada a resposta.
+Como cada requisição dessa possui um atraso, esse modelo acaba sendo um grnade problema pra aplicações web que precisam requisitar informações a um servidor de forma contínua, como um chat ou um jogo on-line.
+Mesmo após receber as informações do servidor, o navegador pode realizar requisições sem precisar recarregas a página, usando o bom e velho AJAX.
+Que é uma chamada assíncrona feita com JavaScript.
+Porém, mesmo realizando uma chamada assíncrona, por baixo dos panos é realizada uma nova requisição HTTP.
+Sendo assim, temos o mesmo problema de performance.
+o Websocket veio para resolver este problema de comunicação, uma vez que utilizando ele, a conexão criada entre o navegador e o servidor é contínua. 
+Por isso, a velocidade de tráfego é muito superior ao protocolo HTTP.
+Apesar de poderoso, o conceito de sua arquitetura é bem simples.
+É uma arquitetura baseada em eventos, onde o navegador e o servidor vão receber e emitir eventos um para o outro.
+Como citado acima, um bom exemplo de aplicação que demanda informações em tempo real é um chat. 
+Por isso, vamos comprar o fluxo utilizando o HTTP e o Websocket em um chat.
+
+- HTTP:
+Enquanto o usuário um digita a mensagem ambos os navegadores realizam requisições continuamente para o servidor, para saber se existe alguma mensagem a ser entregue.
+Assim que a mensagem do usuário 1 é enviada ao servidor, o usuário 2 apenas receberá após o navegador realizar a próxima requisição ao servidor e vice-versa.
+Ou seja, são necessárias diversas requisições mesmo quando não há mensagem para ser recebida.
+A mensagem nao é entregue de forma automárica, sendo necessário o usuário realizar uma nova requisição para recebe-la.
+
+- Websocket:
+Nesse protocolo uma conexão persistente entre o navegador e o servidor é estabelecida para cada usuário no momento em que ele entra no site.
+Assim que uma mensagem for enviada, ela é entrege ao destinatário mesmo que o mesmo nao a solicite de forma explícita.
+
+Percebe-se que utilizando o Websocket, nao estaremos sobrecarregando o servidor com requisições inúteis e as informações fluem de forma mais rápida e contínua.
+Vale lembrar que Websocket é suportado por diversas linguagens e ambientes como: C, C++, C#, Java, Ruby, Python, PHP dentre várias outras.
+Porém serão encontradas, principalmente, implementações en NodeJS, que foi a pioneira na adaptação para o uso de Websocket por conta da arquitetura do JavaScript.
+Como tudo no mundo da tecnologia o Websocket nao é a melhor solução para todos os problemas.
+Ele é aconselhavel estritamente em aplicações que demandam comunicação bilateral em tempo real.
+Utiliza-lo em casos diferente pode afetar negativamente sua aplicação, perdendo em performance e dificultando a vida do desenvolvedor para realizar processos simples.
+Alguns cases interessantes de utilização de Websocket sao os jogos .io, que são jogos multiplayer via browser.
+Alguns conhecidos são: Slither.io, Agar.io e o Surviv.io.
+Caso queira conhecer mais jogos desse tipo, sugiro o site io-games.io.
+Link para uma implementação didática e simplificada de Websocket: https://github.com/sergiotcnolivre/chat_exemple_websocket
