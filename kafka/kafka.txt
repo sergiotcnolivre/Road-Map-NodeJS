@@ -1,0 +1,14 @@
+Apache Kafka é uma plataforma opensource de streamimg de eventos distribuida. 
+Com ele é possível publicar, armazenar, processar e consumir um grande fluxo de dados.
+Event-driven Architecture é a arquitetura onde o kafka é amplamente utilizado.
+Event streamimg, simplificando é uma forma de capturar, analisar e responder aos eventos em tempo real.
+O event streamimg garante um fluxo contínuo e interpretação dos dados para que as informações certas estejam no lugar certo e na hora certa.
+plataformas de streamimg assim como o kafka tem tres obetivos chave:
+- Publicar e observar streams de eventos;
+- Armazenar streams de eventos de uma maneira durável e tolerante a falhas;
+- Processar eventos de streams enquanto eles ocorrem ou retrospectivamente.
+O Kafka faz isso de maneira distribuida, elástica, tolerante a falhas e segura.
+Normalmente, o Apache Kafka é usado para dois tipos de aplicações:
+- As que necessitam de pipelines de streamimg em tempo real, que obtém dados entre sistemas ou aplicativos de maneira confiável;
+- Aplicações de streamimg em tempo real que transformam ou reagem ao fluxo de dados.
+Resumindo, nós podemos criar aplicações para streamimg de informações em tempo real entre diversos sistemas, diversas plataformas em diversos formatos, inclusive podendo processar essas informações em tempo real.
